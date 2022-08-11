@@ -1,0 +1,37 @@
+
+
+body {
+    margin: 0;
+}
+
+navigation-bar {
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00009b;
+}
+
+navigation-item {
+    float: left;
+    padding: 1em;
+    text-align: center;
+    padding: 1.5em 1.5em;
+}
+
+navigation-item a {
+    color: white;
+    text-decoration: none;
+}
+
+navigation-item:hover {
+    background-color: #000064;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    navigation-bar navigation-item {
+        display: block;
+        float: none;
+    }
+}
