@@ -20,30 +20,22 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link href="../static/base.css" type="text/css" rel="stylesheet">
+  {% block addcss %}
+  {% endblock addcss %}
 
 </head>
 
 <body>
   <navigation-bar>
     <navigation-item>
-      <a href="#" alt="#" class="active">Home</a>
+      <a href="/" alt="#" class="active">Home</a>
     </navigation-item>
     <navigation-item>
-        <a href="#" alt="#" class="active">Home</a>
-      </navigation-item>
-      <navigation-item>
-        <a href="#" alt="#" class="active">Home</a>
-      </navigation-item>
-      <navigation-item>
-        <a href="#" alt="#" class="active">Home</a>
-      </navigation-item>
-      <navigation-item>
-        <a href="#" alt="#" class="active">Home</a>
-      </navigation-item>
-      <navigation-item>
-        <a href="#" alt="#" class="active">Home</a>
+        <a href="/cssplayground" alt="#">CSS Playground</a>
       </navigation-item>
   </navigation-bar>
-
+  {% block content %}
+    whatever
+  {% endblock content %}
 </body>
 </html>
