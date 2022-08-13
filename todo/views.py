@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
-from django.views.generic.edit import CreateView, DeleteView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 from todo.models import toDo
 from todo.forms import toDoForm
@@ -16,16 +16,11 @@ class createToDoFormView(CreateView):
     form_class = toDoForm
     
     def form_valid(self, form):
-        if form.is_valid():
-            print('save')
-            instance = form.save(commit=False)
-            instance.save()
-        else:
-            print('form error')
+        print('wtf double')
+        form.save()
         return super(createToDoFormView, self).form_valid(form)
     
     success_url = reverse_lazy('todohome')
-
     
 class deleteToDoFormView(DeleteView):
     model = toDo

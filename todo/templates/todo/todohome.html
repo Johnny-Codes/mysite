@@ -1,6 +1,7 @@
 {% extends 'home/base.html' %}
 
 {% block addcss %}
+<link href="../static/base.css" type="text/css" rel="stylesheet">
 <link href="../static/todo.css" type="text/css" rel="stylesheet">
 {% endblock addcss %}
 
@@ -25,12 +26,10 @@
                         {{ object.description }} <br> {{ object.category_type }}
                     </p>
                     <p>
-                        <center>
-                            <form action="{% url 'deletetodo' object.pk %}" method="POST">
-                              {% csrf_token %}
-                              <input class="sticky delete" type="submit" value="Delete"/>
-                            </form>
-                          </center>
+                        <form action="{% url 'deletetodo' object.pk %}" method="POST">
+                            {% csrf_token %}
+                            <input class="sticky delete" type="submit" value="Delete"/>
+                        </form>
                     </p>                        
                     </a>
                 </li>

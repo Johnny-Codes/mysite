@@ -10,11 +10,12 @@
     <form method="POST">
         {% csrf_token %}
         <ul>
-            <li>
+            <li><a href="#">
                 <p>{{ form.title }}</p>
                 <p>{{ form.description }}</p>
                 <p>{{ form.category_type|title }}</p>
-                <p><input type="submit" value="Save" class="submit-button"/></p>
+                <p><input type="submit" value="Submit" class="submit-button"/></p>
+                </a>
             </li>
         </ul> 
     </form>
