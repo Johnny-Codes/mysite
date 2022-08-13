@@ -6,26 +6,45 @@
 
 
 {% block content %}
-<section-heading>
-    <section-heading-title>
-        <h1>This is my CSS Playground</h1>
-    </section-heading-title>
-</section-heading>
+<container-main>
+    <section-heading>
+        <section-heading-title>
+            <h1>This is my CSS Playground</h1>
+        </section-heading-title>
+    </section-heading>
+    <project-container>
+        <project-section>
+            <project-title>
+                <h1>Cool bubble outline</h1>
+            </project-title>
+            <project-display>
+                Display the project.
+            </project-display>
+            <project-description>
+                <p>This is where I talk about what I learned to do</p>
+            </project-description>
+            <project-code>
+                <p>This is where I'll put the inline code.</p>
+            </project-codef>
+        </project-section>
+    </project-container>
 
-<project-section>
-    <project-title-1>
-        <h1>This is the title section of the project</h1>
-    </project-title-1>
-    <project-display-1>
-        Display what it does.
-    </project-display-1>
-    <project-description-1>
-        This is where I talk about what I learned to do
-    </project-description-1>
-    <project-code-1>
-        This is where I'll put the inline code.
-    </project-code-1>
-</project-section>
-
+    <project-container>
+        <project-section>
+            <project-title>
+                <h1>This is the title section of the project</h1>
+            </project-title>
+            <project-display>
+                <p>Display what it does.</p>
+            </project-display>
+            <project-description>
+                <p>This is where I talk about what I learned to do</p>
+            </project-description>
+            <project-code>
+                <p>This is where I'll put the inline code.</p>
+            </project-codef>
+        </project-section>
+    </project-container>
+</container-main>
 
 {% endblock content %}

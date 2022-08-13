@@ -7,3 +7,6 @@ def index(request):
 
 def css_playground(request):
     return render(request, "home/cssplayground.html")
+
+def js_playground(request):
+    return render(request, "home/jsplayground.html")

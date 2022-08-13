@@ -1,5 +1,5 @@
 <!doctype html>
-
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -26,16 +26,22 @@
 </head>
 
 <body>
-  <navigation-bar>
+  <navigation-bar id="navigation-bar">
     <navigation-item>
-      <a href="/" alt="#" class="active">Home</a>
+      <a href="{% url 'home' %}" class="active">Home</a>
     </navigation-item>
     <navigation-item>
-        <a href="/cssplayground" alt="#">CSS Playground</a>
-      </navigation-item>
+      <a href="{% url 'cssplayground' %}">CSS Playground</a>
+    </navigation-item>
+    <navigation-item>
+        <a href="{% url 'jsplayground' %}">JS Playground</a>
+    </navigation-item>
   </navigation-bar>
   {% block content %}
-    whatever
+  <container-main>
+    This is the homepage.
+  </container-main>
   {% endblock content %}
+  
 </body>
 </html>
