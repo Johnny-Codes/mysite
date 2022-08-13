@@ -10,3 +10,6 @@ def css_playground(request):
 
 def js_playground(request):
     return render(request, "home/jsplayground.html")
+
+def django_projects(request):
+    return render(request, "home/djangoprojects.html")

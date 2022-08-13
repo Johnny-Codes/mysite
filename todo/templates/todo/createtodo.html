@@ -1,0 +1,21 @@
+{% extends 'home/base.html' %}
+
+{% block addcss %}
+<link href="../../static/base.css" type="text/css" rel="stylesheet">
+<link href="../../static/todo.css" type="text/css" rel="stylesheet">
+{% endblock addcss %}
+
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <ul>
+            <li>
+                <p>{{ form.title }}</p>
+                <p>{{ form.description }}</p>
+                <p>{{ form.category_type|title }}</p>
+                <p><input type="submit" value="Save" class="submit-button"/></p>
+            </li>
+        </ul> 
+    </form>
+{% endblock content %}

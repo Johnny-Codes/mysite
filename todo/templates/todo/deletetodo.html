@@ -1,0 +1,6 @@
+{% block content %}
+    <form action="{% url 'deletetodo' object.pk %}" method="POST">
+        {% csrf_token %}
+        <input class="btn btn-default btn-danger" type="submit" value="Delete"/>
+    </form>
+{% endblock content %}

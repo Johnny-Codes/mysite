@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block addcss %}
+<link href="../../static/base.css" type="text/css" rel="stylesheet">
+<link href="../static/djangoprojects.css" type="text/css" rel="stylesheet">
+{% endblock addcss %}
+
+
+{% block content %}
+
+<h1>Django Projects Here</h1>
+<ul>
+    <li><a href="{% url 'todohome' %}">To Do App</a></li>
+</ul>
+
+{% endblock content %}

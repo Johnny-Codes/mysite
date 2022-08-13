@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}
+
+{% block addcss %}
+<link href="../static/todo.css" type="text/css" rel="stylesheet">
+{% endblock addcss %}
+
+
+{% block content %}
+<container-main>
+    <note-section>
+        <h4>I've done way more complicated stuff than this. But I found this sticky note thing and really wanted to check it out.</h4>
+    </note-section>
+    <create-to-do>
+        <a href="{% url 'createtodo' %}">Create To Do</a>
+    </create-to-do>
+    <sticky-container>
+        <ul>
+            {% for object in data %}
+                <li>
+                    <a href="#">
+                    <h2>
+                        {{ object.title }}
+                    </h2>
+                    <p>
+                        {{ object.description }} <br> {{ object.category_type }}
+                    </p>
+                    <p>
+                        <center>
+                            <form action="{% url 'deletetodo' object.pk %}" method="POST">
+                              {% csrf_token %}
+                              <input class="sticky delete" type="submit" value="Delete"/>
+                            </form>
+                          </center>
+                    </p>                        
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </sticky-container>
+</container-main>
+{% endblock content %}

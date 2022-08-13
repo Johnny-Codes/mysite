@@ -1,5 +1,5 @@
 <!doctype html>
-{% load static %}
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -15,12 +15,11 @@
   <meta property="og:description" content="Full Stack Development and Marketing Solutions">
   <meta property="og:image" content="put an image here">
 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link href="../static/base.css" type="text/css" rel="stylesheet">
+
+  
   {% block addcss %}
+  <link href="../static/base.css" type="text/css" rel="stylesheet">
   {% endblock addcss %}
 
 </head>
@@ -35,6 +34,9 @@
     </navigation-item>
     <navigation-item>
         <a href="{% url 'jsplayground' %}">JS Playground</a>
+    </navigation-item>
+    <navigation-item>
+      <a href="{% url 'djangoprojects' %}">Django Projects</a>
     </navigation-item>
   </navigation-bar>
   {% block content %}
